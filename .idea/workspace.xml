@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd1128ce-bcca-4a0e-b461-7dbde44b4d6e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="$PROJECT_DIR$/.gitattributes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DSA_GA_vk_Selenium.iml" afterPath="$PROJECT_DIR$/DSA_GA_vk_Selenium.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/output.csv" afterPath="$PROJECT_DIR$/output.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/VkAnalyzer.java" afterPath="$PROJECT_DIR$/src/main/java/VkAnalyzer.java" />
     </list>
     <ignored path="VK_diameter.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -543,6 +535,14 @@
       <option name="presentableId" value="Default" />
       <updated>1476566740279</updated>
     </task>
+    <task id="LOCAL-00001" summary="integrated with selenium">
+      <created>1476596318414</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1476596318414</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -588,7 +588,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="integrated with selenium" />
+    <option name="LAST_COMMIT_MESSAGE" value="integrated with selenium" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
