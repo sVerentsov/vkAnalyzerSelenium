@@ -1,5 +1,8 @@
 import com.vk.api.sdk.exceptions.ApiException;
 import com.vk.api.sdk.exceptions.ClientException;
+import exceptions.FriendsChainException;
+import exceptions.LoopedFriendChainException;
+import exceptions.TooLongFriendsChain;
 import models.UserCredentials;
 import services.Crawler;
 import services.IdService;
@@ -21,20 +24,25 @@ public class VkAnalyzer {
     }
     public static void main(String[] args) throws InterruptedException, ClientException, ApiException {
 
-        UserCredentials userCredentials = new UserCredentials(1, "email or phone", "password");
+        UserCredentials userCredentials = new UserCredentials(id, "email or phone", "password");
         IdService idService = new IdService();
         Crawler crawler = new Crawler(userCredentials.getLogin(), userCredentials.getPassword());
         VkExplorerService explorerService = new VkExplorerService(idService, crawler);
-        String to = "<short name of user>";
+        String to = "<short name>";
 
         HashMap<Integer,List<Integer>> sumFriendsCounts = new HashMap<>();
         HashMap<Integer,Integer> chainsLengthCountMap = new HashMap<>();//count of chains with different lengths
-        int idsCount = 100;
+        int idsCount = 2;
         List<String> ids = generateIds(idsCount);
         int c = 0;
         for(String id : ids) {
             System.out.println(c++ +"\\"+idsCount);
-            List<Integer> friendsCounts = explorerService.getFriendsChain(id,to);
+            List<Integer> friendsCounts = null;
+            try {
+                friendsCounts = explorerService.getFriendsChain(id,to);
+            } catch (FriendsChainException friendsChain) {
+                friendsCounts = friendsChain.getFriendsList();
+            }
             int chainLength = friendsCounts.size();
             if(sumFriendsCounts.containsKey(chainLength)) {
                 List<Integer> currentFriendCounts = sumFriendsCounts.get(chainLength);
